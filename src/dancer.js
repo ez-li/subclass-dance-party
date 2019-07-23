@@ -2,8 +2,7 @@
 var makeDancer = function(top, left, timeBetweenSteps) {
 
   // use jQuery to create an HTML <span> tag
-  this.$node = $('<span class="dancer"></span>');
-
+  this.$node = $(`<span class="${this.class}"><img class="sadcowboy" src = "${this.image}"></img></span>`);
   this.timeBetweenSteps = timeBetweenSteps;
   this.step();
   this.setPosition(top, left);

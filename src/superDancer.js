@@ -1,28 +1,15 @@
 
-var makeLargerDancer = function(top, left, timeBetweenSteps) {
-  this.class = "dancer larger";
-  this.image = "sadcowboy.png"
-  debugger;
-  //this.$node = $('<img class="dancerImg" src = "src/sadcowboy.png" height="50">');
+var makeHorseDancer = function(top, left, timeBetweenSteps) {
+  this.class = "dancer super";
   makeDancer.call(this, top, left, timeBetweenSteps);
-  console.log()
-  //this.$node.css.append('background-image: url("sadcowboy.png")');
-  // this.$node = $('<span class="dancer larger"><img class="sadcowboy" src = "sadcowboy.png"></img></span>');
+  // this.$node = $('<span class="dancer super"><img class="horse" src = "horse.png" ></img></span>');
 };
 
-makeLargerDancer.prototype = Object.create(makeDancer.prototype);
+makeHorseDancer.prototype = Object.create(makeDancer.prototype);
 
-makeLargerDancer.prototype.step = function() {
-
-  this.$node
+makeHorseDancer.prototype.step = function() {
   makeDancer.prototype.step.call(this);
-  //this.left += 400;
-  //makeDancer.left += 10;
-  //this.$node.toggle();
-  //$('.larger').css('border', '10px solid blue');
   this.$node.toggle();
-
-
 };
 
 
@@ -30,7 +17,7 @@ makeLargerDancer.prototype.step = function() {
 $(document).ready(function() {
   window.dancers = [];
 
-  $('.addDancerButtonLrg').on('click', function(event) {
+  $('.addDancerButtonSuper').on('click', function(event) {
     /* This function sets up the click handlers for the create-dancer
      * buttons on dancefloor.html. You should only need to make one small change to it.
      * As long as the "data-dancer-maker-function-name" attribute of a

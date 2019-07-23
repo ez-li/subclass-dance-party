@@ -1,36 +1,7 @@
-
-var makeLargerDancer = function(top, left, timeBetweenSteps) {
-  this.class = "dancer larger";
-  this.image = "sadcowboy.png"
-  debugger;
-  //this.$node = $('<img class="dancerImg" src = "src/sadcowboy.png" height="50">');
-  makeDancer.call(this, top, left, timeBetweenSteps);
-  console.log()
-  //this.$node.css.append('background-image: url("sadcowboy.png")');
-  // this.$node = $('<span class="dancer larger"><img class="sadcowboy" src = "sadcowboy.png"></img></span>');
-};
-
-makeLargerDancer.prototype = Object.create(makeDancer.prototype);
-
-makeLargerDancer.prototype.step = function() {
-
-  this.$node
-  makeDancer.prototype.step.call(this);
-  //this.left += 400;
-  //makeDancer.left += 10;
-  //this.$node.toggle();
-  //$('.larger').css('border', '10px solid blue');
-  this.$node.toggle();
-
-
-};
-
-
-
 $(document).ready(function() {
   window.dancers = [];
 
-  $('.addDancerButtonLrg').on('click', function(event) {
+  $('.addDancerButton').on('click', function(event) {
     /* This function sets up the click handlers for the create-dancer
      * buttons on dancefloor.html. You should only need to make one small change to it.
      * As long as the "data-dancer-maker-function-name" attribute of a
@@ -57,7 +28,6 @@ $(document).ready(function() {
       Math.random() * 1000
     );
     $('body').append(dancer.$node);
-
   });
 });
 
