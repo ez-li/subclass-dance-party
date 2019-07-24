@@ -4,7 +4,7 @@ var makeLargerDancer = function(top, left, timeBetweenSteps) {
   // this.image = "sadcowboy.png"
   //debugger;
   makeDancer.call(this, top, left, timeBetweenSteps);
-  this.$node = $('<span class="dancer"><img src = "sadcowboy.png" height="50"></span>');
+  this.$node = $('<span class="cowboyDancer"><img src = "sadcowboy.png" height="50"></span>');
 
 };
 
